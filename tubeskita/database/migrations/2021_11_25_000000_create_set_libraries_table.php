@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaporansTable extends Migration
+class CreateSetLibrariesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateLaporansTable extends Migration
      */
     public function up()
     {
-        Schema::create('laporans', function (Blueprint $table) {
+        Schema::create('set_libraries', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id');
+            $table->string('name', 120);
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('category_id')->references('id')->on('set_categories')->onDelete('cascade');
         });
     }
 
@@ -26,6 +30,6 @@ class CreateLaporansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laporans');
+        Schema::dropIfExists('set_libraries');
     }
 }
