@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function index()
+    public function login()
     {
-        return view('login.index', [
-            'title' => 'Login - Lapor'
+        return view('login.login', [
+            'title' => 'Login'
         ]);
     }
 }
