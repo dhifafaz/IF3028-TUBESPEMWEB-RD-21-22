@@ -4,20 +4,42 @@
     <body>
         <div class="register-card">
             <div class="register-title">Masuk</div>
+            @if(session()->has('success'))
+                <span class="alert alert-success">
+                    {{ session('success') }}
+                </span>
+            @endif
+
+            @if(session()->has('loginError'))
+                <span class="alert alert-danger">
+                    {{ session('loginError') }}
+                </span>
+            @endif
             <div class="register-body">
                 {{-- @include('component.alert') --}}
                 {{-- {{ route('login.user.post') }} --}}
+                
                 <form action="/login" method="post">
                     @csrf
                     <div class="register-form">
                         <div class="register-isi">
-                            <label for="username" class="register-label">Username</label>
-                            <input type="text" name="username" class="register-input" placeholder="Username">
+                            <label for="email" class="register-label">Email</label>
+                            <input type="text" name="email" class="register-input" placeholder="Email" value="{{ old('email') }}" required>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
                         <div class="register-isi">
                             <label for="password" class="register-label">Password</label>
-                            <input type="password" name="password" class="register-input" placeholder="Password">
+                            <input type="password" name="password" class="register-input @error('password') is-invalid @enderror" placeholder="Password" required>
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class="register-submit">
