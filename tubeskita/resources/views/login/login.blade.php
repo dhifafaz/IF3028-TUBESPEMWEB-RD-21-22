@@ -7,7 +7,7 @@
             <div class="register-body">
                 {{-- @include('component.alert') --}}
                 {{-- {{ route('login.user.post') }} --}}
-                <form action="" method="post">
+                <form action="/login" method="post">
                     @csrf
                     <div class="register-form">
                         <div class="register-isi">

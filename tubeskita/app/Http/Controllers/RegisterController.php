@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\DB;
 use App\Models\User;
 
 class RegisterController extends Controller
@@ -17,20 +18,22 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'username' => 'required|string|min:8|max:255|unique:users',
-            'email' => 'required|string|email:dns|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed|unique:users',
-            'telp' => 'required|numeric|min:12|max:13',
+            'name' => 'required|max:255',
+            'role_id' => 'required',
+            'email' => 'required|email:dns',
+            'username' => 'required|min:8|unique:users',
+            'telp' => 'required|min:12',
+            'password' => 'required|string|min:8|confirmed',
         ]);
 
-        User::create([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'telp' => $request->telp,
-        ]);
+        $validated['password'] = bcrypt($validated['password']);
+        
+        User::create($validated);
+
+        return redirect('/login')->with('success', 'Berhasil mendaftar');
+        // dd($validated);
+        // echo 'Hello';
+        // dd(request()->all());
     }
 
 }
