@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-    <body>
         <div class="register-card">
             <div class="register-title">Daftar</div>
             <div class="register-body">
@@ -83,5 +82,5 @@
                 <a class="daftar" href="/login">MASUK SEKARANG</a>
             </div>
         </div>            
-    </body>
+
 @endsection

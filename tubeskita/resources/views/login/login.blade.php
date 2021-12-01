@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <body>
+    
         <div class="register-card">
             <div class="register-title">Masuk</div>
             @if(session()->has('success'))
@@ -53,5 +53,5 @@
                 <a class="daftar" href="/register">DAFTAR SEKARANG</a>
             </div>
         </div>            
-    </body>
+    
 @endsection
