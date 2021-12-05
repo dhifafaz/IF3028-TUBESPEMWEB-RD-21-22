@@ -20,12 +20,14 @@ use App\Http\Controllers\DashboardController;
 //     return view('welcome');
 // });
 
-Route::get('/login', [LoginController::class, 'login'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'register']);
+Route::get('/register', [RegisterController::class, 'register'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('auth');
 Route::get('/', [DashboardController::class, 'dashboard']);
+
+Route::post('/lapor', [DashboardController::class, 'dashboard'])->middleware('auth');

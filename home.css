@@ -3,7 +3,7 @@
 }
 
 .top-background{
-    background-image: url(../images/laporcoverhomepage.jpg);
+    background-image: url(./laporcoverhomepage.jpg);
     padding : 50px;
 }
 
@@ -98,31 +98,4 @@ hr{
 footer{
     margin-top: 40px;
     text-align: center;
-}
-
-.nav-bar button{
-    border: none;
-    background: none;
-    padding: 5px 10px;    
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.nav-bar button:hover{
-    background-color: #ffffff;
-    color: #ab0b20;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.user-info{
-    font-size: 18px;
-}
-
-.logout-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
