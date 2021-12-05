@@ -126,3 +126,149 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+.content{
+    padding: 30px;
+}
+
+.content h1{
+    text-align: center;
+}
+
+.tipe-laporan{
+    margin-bottom: 20px;
+}
+
+.tipe-laporan p{
+    margin-bottom: 10px;
+}
+
+.title-laporan{
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.title-laporan label{
+    margin-bottom: 10px;
+}
+
+.title-laporan input{
+    font-size: 16px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.detail-laporan{
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.detail-laporan label{
+    margin-bottom: 10px;
+}
+
+.detail-laporan textarea{
+    font-size: 16px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid;    
+}
+
+.date-laporan{
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.date-laporan label{
+    margin-bottom: 10px;
+}
+
+.date-laporan input{
+    font-size: 16px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.location-laporan{
+    margin-bottom: 20px;
+}
+
+.instansi-laporan{
+    margin-bottom: 20px;
+}
+
+.category-laporan{
+    margin-bottom: 20px;
+}
+
+select{
+    font-size: 16px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-top: 10px;
+    width: 100% !important;    
+}
+
+hr{
+    margin-bottom: 20px;
+}
+
+.file{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px;
+}
+
+.file span{
+    margin-bottom:10px;
+}
+
+.custom-button{
+    color: transparent !important;
+}
+
+.custom-button::-webkit-file-upload-button {
+    visibility: hidden;    
+}
+
+.custom-button::before{
+    content: 'Choose file';    
+    display: inline-block;    
+    padding: 10px !important;
+    border-radius: 5px;            
+    cursor: pointer;
+    font-size: 16px;
+    border: 3px solid #ab0b20 !important;    
+    color: #ab0b20;
+    background-color: #ffffff;
+}
+
+.custom-button:hover::before{
+    background-color: #ab0b20 ;
+    color: #ffffff;
+    border: 0px;
+}
+
+.send {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-lapor{
+    font-size: 16px;
+    color: #ab0b20 ;
+    background-color: #ffffff;
+    border: 3px solid #ab0b20 !important;    
+    padding: 10px !important;
+    border-radius: 5px;            
+    cursor: pointer;        
+}
+
+.btn-lapor:hover{
+    color: #ffffff;
+    border: 0px;
+    background-color: #ab0b20 ;
+}
