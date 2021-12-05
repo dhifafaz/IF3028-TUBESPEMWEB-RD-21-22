@@ -1,0 +1,128 @@
+*{
+    font-family:'Verdana', sans-serif;        
+}
+
+.top-background{
+    background-image: url(../images/laporcoverhomepage.jpg);
+    padding : 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 15px;
+}
+
+.nav-bar a{
+    padding: 5px 10px;    
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-bar a:hover{
+    background-color: #ffffff;
+    color: #ab0b20;
+    border-radius: 5px;
+}
+
+.desc-page{
+    text-align: center;
+    color: #ffffff;
+}
+
+.desc-page h1 {
+    font-weight: 600;    
+}
+
+.desc-page p {
+    font-size:24px;
+}
+
+.content-home {
+    margin: 20px;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search {
+    padding: 8px;
+    width: 60%;
+}
+
+.button {
+    padding: 10px;
+    background-color: #ab0b20;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.add-laporan{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.list-laporan{
+    padding : 0px 30px;
+    margin-bottom: 20px;
+}
+
+.lampiran {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+hr{
+    border: 1px solid #AB0B20;
+}
+
+footer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.nav-bar button{
+    border: none;
+    background: none;
+    padding: 5px 10px;    
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-bar button:hover{
+    background-color: #ffffff;
+    color: #ab0b20;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-info{
+    font-size: 18px;
+}
+
+.logout-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
