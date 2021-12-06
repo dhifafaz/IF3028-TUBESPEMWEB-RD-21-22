@@ -36,7 +36,7 @@ class DashboardController extends Controller
         // dd($request->all()); 
         $this->validate($request, [
             'title' => 'required',
-            'laporan' => 'required',
+            'description' => 'required',
             'tgl_kejadian'=> 'required',
             'location'=> 'required',
             'instansi_tujuan'=> 'required',

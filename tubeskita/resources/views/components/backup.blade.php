@@ -19,7 +19,7 @@
 
         <div class="title-laporan">
             <label for="title">Judul Laporan</label>
-            <input type="text" placeholder="Ketik Judul laporan Anda*" name="title" class="form-text-box" value="{{ old('title') }}" required>
+            <input type="text" placeholder="Ketik Judul laporan Anda*" name="title" class="form-text-box"  value="{{ old('title') }}" required>
             @error('title')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -39,8 +39,8 @@
 
         <div class="date-laporan">
             <label for="tgl_kejadian">Tanggal Kejadian</label>
-            <input type="date" placeholder="Tanggal Kejadian*" name="tgl_kejadian" class="form-text-box" value="{{ old('tgl_kejadian') }}" required>
-            @error('tgl_kejadian')
+            <input type="date" placeholder="Tanggal Kejadian*" name="tgl_kejadian" class="form-text-box">
+            @error('date')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
