@@ -19,14 +19,11 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
-        $listLokasi = set_city::orderBy('name', 'asc')->get();
-        $listInstansi = set_province::orderBy('name', 'asc')->get();
+
         $listKategori = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
         
         return view('dashboard.home', [
             'title' => 'Dashboard',
-            'listLokasi' => $listLokasi,
-            'listInstansi' => $listInstansi,
             'listKategori' => $listKategori,
         ]);
     }
@@ -38,8 +35,6 @@ class DashboardController extends Controller
             'title' => 'required',
             'description' => 'required',
             'tgl_kejadian'=> 'required',
-            'location'=> 'required',
-            'instansi_tujuan'=> 'required',
             'category' => 'required',  
         ]);
 
@@ -50,15 +45,13 @@ class DashboardController extends Controller
         $lapor->user_id                 = $request->user_id;
         $lapor->category_id             = $request->category;
         $lapor->laporan_type_id         = $request->type_laporan;
-        $lapor->location_id             = $request->location;
-        $lapor->instansi_tujuan_id      = $request->instansi_tujuan;
         $lapor->status_id               = 1201;
         $lapor->tgl_kejadian            = $request->tgl_kejadian;
 
         if($lapor->save()){
             // return "berhasil";
             return redirect()->back()->with('success', 'Berhasil insert data');
-        } else return redirect()->back()->with('success', 'Berhasil insert data');
+        } else return redirect()->back()->with('danger', 'Gagal insert data');
     }
     
 }
