@@ -4,7 +4,7 @@
 
 <form action="/lapor" method="post" class="form-lapor">
     @csrf
-
+    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
     <p>Pilih Tipe Laporan</p>
     <div class="d-flex mb-5">
          {{-- class="form-type-lapor" --}} <input type="radio" name="type_laporan" name="laporan_type_id" value="1401"> Pengaduan                            
@@ -55,7 +55,7 @@
         <div class="send">
             <div class="d-flex input-submit">
                 <input type="radio" name="anonim" id="" value="1" class="radio-subs"><span class="radio-sub">Anonim</span>
-                <input type="radio" name="rahasia" id="" value="0" class="radio-subs"><span class="radio-sub">Rahasia</span>
+                <input type="radio" name="anonim" id="" value="0" class="radio-subs"><span class="radio-sub">Rahasia</span>
                 <input type="submit" value="Lapor!" class="btn-lapor">
             </div>
         </div>

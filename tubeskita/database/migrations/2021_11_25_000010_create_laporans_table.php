@@ -19,7 +19,6 @@ class CreateLaporansTable extends Migration
             $table->longText('description');
             $table->longText('file')->nullable();
             $table->tinyInteger('anonim')->default(1);
-            $table->tinyInteger('secret')->default(0);
             $table->timestamps();
             $table->softDeletes();
             $table->foreignId('user_id');
