@@ -4,7 +4,7 @@
         Sampaikan Laporan Anda !
     </h1>
 
-    <form action="/lapor" method="post" class="form-lapor">
+    <form action="/lapor" method="post" class="form-lapor" enctype="multipart/form-data">
         @csrf
         @auth
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
@@ -70,7 +70,7 @@
         <div class="d-flex space-bettwen">
             <div class="file">
                 <span>Lampiran</span>
-                <input type="file" class="custom-button" name="lampiran" id="">
+                <input type="file" class="cust" name="lampiran" id="">
             </div>
             <div class="send">
                 <div class="input-submit">
