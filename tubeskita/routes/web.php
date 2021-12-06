@@ -30,4 +30,4 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware('auth');
 Route::get('/', [DashboardController::class, 'dashboard']);
 
-Route::post('/lapor', [DashboardController::class, 'dashboard'])->middleware('auth');
+Route::post('/lapor', [DashboardController::class, 'submit'])->middleware('auth');

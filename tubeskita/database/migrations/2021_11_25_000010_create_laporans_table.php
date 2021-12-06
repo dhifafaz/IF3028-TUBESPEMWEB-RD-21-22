@@ -28,6 +28,7 @@ class CreateLaporansTable extends Migration
             $table->foreignId('location_id');
             $table->foreignId('instansi_tujuan_id');
             $table->foreignId('status_id');
+            $table->date('tgl_kejadian');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('laporan_type_id')->references('id')->on('set_libraries')->onDelete('cascade');
             $table->foreign('location_id')->references('id')->on('set_cities')->onDelete('cascade');
