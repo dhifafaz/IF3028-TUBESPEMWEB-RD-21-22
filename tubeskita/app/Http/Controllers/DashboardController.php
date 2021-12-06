@@ -30,7 +30,7 @@ class DashboardController extends Controller
     
     public function submit(Request $request)
     {
-        return $request->file('lampiran')->store('lampiran');
+        // return $request->file('lampiran')->store('lampiran');
         // dd($request->all()); 
         $this->validate($request, [
             'title' => 'required',
