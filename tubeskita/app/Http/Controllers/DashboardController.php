@@ -45,7 +45,7 @@ class DashboardController extends Controller
 
         $lapor                          = new Laporan;
         $lapor->title                   = $request->title;
-        $lapor->description             = $request->laporan;
+        $lapor->description             = $request->description;
         $lapor->anonim                  = $request->anonim;
         $lapor->user_id                 = $request->user_id;
         $lapor->category_id             = $request->category;
