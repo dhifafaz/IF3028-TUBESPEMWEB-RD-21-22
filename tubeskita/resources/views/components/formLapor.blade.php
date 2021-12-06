@@ -70,7 +70,7 @@
         <div class="d-flex space-bettwen">
             <div class="file">
                 <span>Lampiran</span>
-                <input type="file" class="cust" name="lampiran" id="">
+                <input type="file" class="custom-button" name="lampiran" id="">
             </div>
             <div class="send">
                 <div class="input-submit">
