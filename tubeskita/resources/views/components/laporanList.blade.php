@@ -18,10 +18,10 @@
                     <h3>{{ $laporan->title }}</h3>
                     <p>{{ $laporan->description }}</p>
                     <div class="lampiran">
-                        <p>Lampiran</p>
-                        <p>{{ $laporan->category->name }}</p>
+                        <p>Lampiran : {{ $laporan->lampiran }}</p>
+                        <p>Kategori : {{ $laporan->category->name }}</p>
                         <div class="time">
-                            <p>Waktu: {{ $laporan->created_at }}</p>
+                            <p>Waktu : {{ $laporan->created_at }}</p>
                             <a href="/detail/{{ $laporan->id }}">Lihat selengkapnya > </a>
                         </div>
                     </div>

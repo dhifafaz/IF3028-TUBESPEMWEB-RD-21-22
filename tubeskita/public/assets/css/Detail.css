@@ -56,7 +56,7 @@ hr{
     border: 1px solid #AB0B20;
 }
 
-.dTugas-material {
+.detail-lampiran {
     flex: 0 0 auto;
     border-radius: 10px;
     overflow: hidden;
@@ -68,12 +68,12 @@ hr{
     box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.08);
 }
 
-.dTugas-material-img {
+.detail-lampiran-img {
     width: 63px;
     height: 58px;
 }
 
-.dTugas-material-info {
+.detail-lampiran-info {
     height: 100%;
     width: 100%;
     padding: 0 10px;
@@ -81,12 +81,12 @@ hr{
     align-items: center;
 }
 
-.dTugas-material-text {
+.detail-lampiran-text {
     width: 240px;
     margin-right: 10px;
 }
 
-.dTugas-material-text * {
+.detail-lampiran-text * {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

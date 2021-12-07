@@ -33,14 +33,14 @@
                         <img src="{{ asset('storage') }}/lampiran/{{ $laporan->lampiran }}" alt="">
                     </div>
                 @else
-                <div class="dTugas-material" onclick="alert('Opening Materi....')">
-                    <img class="dTugas-material-img dTugas-img" src="{{ asset('assets') }}/images/folders.png">
-                    <div class="dTugas-material-info">
-                        <div class="dTugas-material-text">
-                            <p class="subheadline dTugas-title text-small">{{ $laporan->lampiran }}.pdf</p>
-                            <p class="subheadline text-small">PDF</p>
+                <div class="detail-lampiran" onclick="alert('Opening Materi....')">
+                    <img class="detail-lampiran-img dTugas-img" src="{{ asset('assets') }}/images/folders.png">
+                    <div class="detail-lampiran-info">
+                        <div class="detail-lampiran-text">
+                            <p class="subheadline dTugas-title text-small">{{ $laporan->lampiran }}</p>
+                            <p class="subheadline text-small">{{ pathinfo($laporan->lampiran, PATHINFO_EXTENSION) }}</p>
                         </div>
-                        <a href="{{ asset('storage') }}/lampiran/{{ $laporan->lampiran}}">
+                        <a href="{{ asset('storage') }}/lampiran/{{ $laporan->lampiran}}" download="{{ $laporan->lampiran }}">
                             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle opacity="0.2" cx="14.2422" cy="14.2407" r="14" fill="#3991C9"/>
                                 <path d="M14.3229 16.5312L14.3229 8.50391" stroke="#3991C9" stroke-width="1.27932" stroke-linecap="round" stroke-linejoin="round"/>
