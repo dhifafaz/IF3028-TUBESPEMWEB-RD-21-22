@@ -11,7 +11,7 @@
         </div>                
     </div>            
     <div class="desc-page">
-        <h1>Layanan Aspirasi dan Pengaduan Online Rakyat</h1>
-        <p>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</p>
+        <h1>Layanan Aspirasi dan Pengaduan Online Prodi Teknik Informatika ITERA</h1>
+        <p>Sampaikan laporan atau komentar Anda langsung </p>
     </div>            
 </div>

@@ -33,3 +33,7 @@ Route::get('/buat-laporan', [LaporanController::class, 'index'])->middleware('au
 Route::get('/', [HomeController::class, 'index']);
 
 Route::post('/lapor', [LaporanController::class, 'submit'])->middleware('auth');
+
+Route::get('/detail', function(){
+    return view('detail.detailLaporan');
+});

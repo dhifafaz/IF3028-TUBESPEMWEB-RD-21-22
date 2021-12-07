@@ -70,15 +70,6 @@ footer{
     text-align: center;
 }
 
-.user-info{
-    font-size: 18px;
-}
-
-.logout-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .content{
     padding: 30px;

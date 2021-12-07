@@ -74,7 +74,7 @@
                 <span>Lampiran</span>
                 <input type="file" class="custom-button" name="lampiran" id="">
                 @error('lampiran')
-                <span class="invalid-feedback" role="alert">
+                    <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror

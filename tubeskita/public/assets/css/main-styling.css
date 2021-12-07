@@ -1,6 +1,7 @@
 body{
     margin: 0px !important;
 }
+
 .alert-success {
     padding: 20px;
     background-color: #0fc439;
@@ -81,4 +82,14 @@ body{
     color: #ab0b20;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.user-info{
+    font-size: 18px;
+}
+
+.logout-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -12,7 +12,7 @@
             @endif
 
             @if(session()->has('loginError'))
-                <div class="alert-success">
+                <div class="alert-danger">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                     <strong>{!! session('loginError') !!}</strong>
                 </div>
