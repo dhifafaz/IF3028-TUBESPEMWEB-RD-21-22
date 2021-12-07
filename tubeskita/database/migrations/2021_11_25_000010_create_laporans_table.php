@@ -17,7 +17,7 @@ class CreateLaporansTable extends Migration
             $table->id();
             $table->string('title', 200);
             $table->longText('description');
-            $table->longText('file')->nullable();
+            $table->longText('lampiran')->nullable();
             $table->tinyInteger('anonim');
             $table->date('tgl_kejadian');
             $table->timestamps();

@@ -1,0 +1,103 @@
+*{
+    font-family:'Verdana', sans-serif;        
+}
+
+.desc-page{
+    text-align: center;
+    color: #ffffff;
+}
+
+.desc-page h1 {
+    font-weight: 600;    
+}
+
+.desc-page p {
+    font-size:24px;
+}
+
+.content-home {
+    margin: 20px;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.search {
+    padding: 8px;
+    width: 60%;
+}
+
+.button {
+    padding: 10px;
+    background-color: #ab0b20;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.add-laporan{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.list-laporan{
+    padding : 0px 30px;
+    margin-bottom: 20px;
+}
+
+.lampiran {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+hr{
+    border: 1px solid #AB0B20;
+}
+
+footer{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.content{
+    padding: 30px;
+}
+
+.content h1{
+    text-align: center;
+}
+
+.dot {
+    width: 40px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.pager{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.test{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-self: center;
+}

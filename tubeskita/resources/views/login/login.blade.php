@@ -5,15 +5,17 @@
         <div class="register-card">
             <div class="register-title">Masuk</div>
             @if(session()->has('success'))
-                <span class="alert alert-success">
-                    {{ session('success') }}
-                </span>
+                <div class="alert-success">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>{!! session('success') !!}</strong>
+                </div>
             @endif
 
             @if(session()->has('loginError'))
-                <span class="alert alert-danger">
-                    {{ session('loginError') }}
-                </span>
+                <div class="alert-danger">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>{!! session('loginError') !!}</strong>
+                </div>
             @endif
             <div class="register-body">
                 {{-- @include('component.alert') --}}

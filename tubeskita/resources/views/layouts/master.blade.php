@@ -10,10 +10,10 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Tubes Pemweb - {{ $title }}</title>
+	<title>Tubes Pemweb - {{ $title ?? '' }}</title>
 	<link href="{{ asset('assets') }}/css/main-styling.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="{{ asset('assets') }}/images/LogoItera.png" />
-    <link href="{{ asset('assets') }}/css/{{ $title }}.css" rel="stylesheet">
+    <link href="{{ asset('assets') }}/css/{{ $title ?? '' }}.css" rel="stylesheet">
 	@yield('css')
 </head>
 

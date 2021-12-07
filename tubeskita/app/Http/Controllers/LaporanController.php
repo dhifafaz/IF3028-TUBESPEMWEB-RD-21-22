@@ -2,85 +2,74 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreLaporanRequest;
-use App\Http\Requests\UpdateLaporanRequest;
+use Illuminate\Http\Request;
+use Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
+
 use App\Models\Laporan;
+use App\Models\set_library;
+
 
 class LaporanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $listKategori = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
+        
+        return view('laporan.lapor', [
+            'title' => 'Lapor',
+            'listKategori' => $listKategori,
+        ]);
     }
+    
+    public function submit(Request $request)
+    {
+        // return $request->file('lampiran')->store('lampiran');
+        // dd($request->all()); 
+        $validated = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'tgl_kejadian'=> 'required',
+            'category_id' => 'required',  
+            'lampiran' => 'required|mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,zip,rar,7z,jpg,jpeg,png,gif,bmp,svg',
+        ]);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreLaporanRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreLaporanRequest $request)
-    {
-        //
-    }
+        if($request->file('lampiran')){
+            $validated['lampiran'] = $request->file('lampiran')->store('lampiran');
+        }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Laporan  $laporan
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Laporan $laporan)
-    {
-        //
-    }
+        Laporan::create([
+            'title' => $validated['title'],
+            'description' => $validated['description'],
+            'lampiran' => $validated['lampiran'],
+            'anonim' => $request->anonim,
+            'tgl_kejadian' => $validated['tgl_kejadian'],
+            'user_id' => $request->user_id,
+            'category_id' => $validated['category_id'],
+            'laporan_type_id' => $request->laporan_type_id,
+            'status_id' => $request->status_id,
+        ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Laporan  $laporan
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Laporan $laporan)
-    {
-        //
-    }
+        return redirect()->back()->with('success', 'Berhasil insert data');
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateLaporanRequest  $request
-     * @param  \App\Models\Laporan  $laporan
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateLaporanRequest $request, Laporan $laporan)
-    {
-        //
-    }
+        // $lapor                          = new Laporan;
+        // $lapor->title                   = $request->title;
+        // $lapor->description             = $request->description;
+        // $lapor->anonim                  = $request->anonim;
+        // $lapor->user_id                 = $request->user_id;
+        // $lapor->category_id             = $request->category;
+        // $lapor->laporan_type_id         = $request->type_laporan;
+        // $lapor->status_id               = 1201;
+        // $lapor->tgl_kejadian            = $request->tgl_kejadian;
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Laporan  $laporan
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Laporan $laporan)
-    {
-        //
+        // if($lapor->save()){
+        //     // return "berhasil";
+        //     return redirect()->back()->with('success', 'Berhasil insert data');
+        // } else return redirect()->back()->with('danger', 'Gagal insert data');
     }
+    
 }
