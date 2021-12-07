@@ -51,8 +51,12 @@
                 
             </div>
             <div class="footer">
-                <div>Anda belum memiliki akun?</div>
-                <a class="daftar" href="/register">DAFTAR SEKARANG</a>
+                <div>
+                    <p>Anda belum memiliki akun?</p>
+                </div>
+                <div>
+                    <a class="daftar" href="/register">DAFTAR SEKARANG</a>
+                </div>                
             </div>
         </div>            
     
