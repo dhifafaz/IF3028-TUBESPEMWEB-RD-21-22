@@ -22,8 +22,7 @@ class Laporan extends Model
 
         $query->when($keywords['search'] ?? false, function($query, $search){
             return $query->where('title', 'like', '%' . $search . '%')
-                        ->orWhere('description', 'like', '%' . $search . '%')
-                        ->orderBy('created_at', 'desc');
+                        ->orWhere('description', 'like', '%' . $search . '%');
         });
 
     }

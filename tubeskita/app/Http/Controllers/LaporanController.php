@@ -30,22 +30,23 @@ class LaporanController extends Controller
     {
         // return $request->file('lampiran')->store('lampiran');
         // dd($request->all()); 
+        if($request->file('lampiran')){
+            // $validated['lampiran'] = $request->file('lampiran')->getClientOriginalName()->store('lampiran');
+            $request->file('lampiran')->move('storage/lampiran', $request->file('lampiran')->getClientOriginalName());
+        }
+
         $validated = $request->validate([
             'title' => 'required',
             'description' => 'required',
             'tgl_kejadian'=> 'required',
             'category_id' => 'required',  
-            'lampiran' => 'required|mimes:pdf,doc,docx,xls,xlsx,ppt,pptx,zip,rar,7z,jpg,jpeg,png,gif,bmp,svg',
         ]);
 
-        if($request->file('lampiran')){
-            $validated['lampiran'] = $request->file('lampiran')->store('lampiran');
-        }
 
         Laporan::create([
             'title' => $validated['title'],
             'description' => $validated['description'],
-            'lampiran' => $validated['lampiran'],
+            'lampiran' => $request->file('lampiran')->getClientOriginalName(),
             'anonim' => $request->anonim,
             'tgl_kejadian' => $validated['tgl_kejadian'],
             'user_id' => $request->user_id,
@@ -72,4 +73,12 @@ class LaporanController extends Controller
         // } else return redirect()->back()->with('danger', 'Gagal insert data');
     }
     
+    public function show(Laporan $id)
+    {
+        // $laporan = DB::table('laporans')->where('id', $id)->get();
+        return view('detail.detailLaporan', [
+            'title' => 'Detail',
+            'laporan' => $id,
+        ]);
+    }
 }

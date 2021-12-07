@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         return view('home.home', [
             'title' => 'Home',
-            'listLaporan' => Laporan::search(request(['search']))->paginate(5)
+            'listLaporan' => Laporan::search(request(['search']))->orderBy('created_at', 'desc')->paginate(5)
         ]);
     }
 }

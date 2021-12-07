@@ -82,7 +82,7 @@
             <div class="send">
                 <div class="input-submit">
                     <input type="radio" name="anonim" id="" value="1" class="radio-subs"><span class="radio-sub">Anonim</span>
-                    <input type="radio" name="anonim" id="" value="0" class="radio-subs"><span class="radio-sub">Rahasia</span>                    
+                    <input type="radio" name="anonim" id="" value="0" class="radio-subs"><span class="radio-sub">Publik</span>                    
                 </div>
                 <div class="btn-submit">
                     <input type="submit" value="Lapor!" class="btn-lapor">

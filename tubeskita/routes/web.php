@@ -34,6 +34,8 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::post('/lapor', [LaporanController::class, 'submit'])->middleware('auth');
 
-Route::get('/detail', function(){
-    return view('detail.detailLaporan');
-});
+// Route::get('/detail', function(){
+//     return view('detail.detailLaporan');
+// });
+
+Route::get('/detail/{id}', [LaporanController::class, 'show'])->middleware('auth');
