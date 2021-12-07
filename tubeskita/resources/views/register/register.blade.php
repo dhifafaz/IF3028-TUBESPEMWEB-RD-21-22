@@ -78,8 +78,12 @@
                 </form>
             </div>
             <div class="footer">
-                <div>Anda sudah terdaftar?</div>
-                <a class="daftar" href="/login">MASUK SEKARANG</a>
+                <div>
+                    <p>Anda sudah terdaftar?</p>
+                </div>
+                <div>
+                    <a class="daftar" href="/login">MASUK SEKARANG</a>
+                </div>                
             </div>
         </div>            
 
