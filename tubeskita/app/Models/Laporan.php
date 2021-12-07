@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use App\Models\set_library;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -31,4 +32,21 @@ class Laporan extends Model
     {
         return $this->belongsTo(set_library::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(set_library::class, 'laporan_type_id');
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(set_library::class, 'status_id');
+    }
+
+
 }
