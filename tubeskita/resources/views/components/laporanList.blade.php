@@ -14,11 +14,12 @@
             <p>Laporan Terkini</p>
             <hr>
             @foreach ($listLaporan as $laporan)
-                <div class="detail-laporan">
+                <div class="detail-laporan" id="{{ $laporan->id }}">
                     <h3>{{ $laporan->title }}</h3>
                     <p>{{ $laporan->description }}</p>
                     <div class="lampiran">
                         <p>Lampiran</p>
+                        <p>{{ $laporan->category->name }}</p>
                         <div class="time">
                             <p>Waktu: {{ $laporan->created_at }}</p>
                             <a href="">Lihat selengkapnya > </a>

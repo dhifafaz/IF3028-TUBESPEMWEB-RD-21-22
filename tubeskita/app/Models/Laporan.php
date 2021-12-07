@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\set_library;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Laporan extends Model
 {
@@ -20,8 +21,14 @@ class Laporan extends Model
 
         $query->when($keywords['search'] ?? false, function($query, $search){
             return $query->where('title', 'like', '%' . $search . '%')
-                        ->orWhere('description', 'like', '%' . $search . '%');
+                        ->orWhere('description', 'like', '%' . $search . '%')
+                        ->orderBy('created_at', 'desc');
         });
 
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(set_library::class);
     }
 }
