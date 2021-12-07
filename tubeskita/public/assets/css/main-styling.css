@@ -12,6 +12,8 @@ body{
     padding: 20px;
     background-color: #ab0b20;
     color: white;
+    margin-bottom:20px;
+    border-radius: 5px;
 }
 
 .closebtn {
