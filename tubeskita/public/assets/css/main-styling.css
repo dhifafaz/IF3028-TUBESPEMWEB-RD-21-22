@@ -27,3 +27,58 @@ body{
 .closebtn:hover {
     color: black;
 }
+
+
+.top-background{
+    background-image: url(../images/laporcoverhomepage.jpg);
+    padding : 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.left-menu{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-bar{
+    display: flex;
+    gap: 15px;
+}
+
+.nav-bar a, .left-menu a{
+    padding: 5px 10px;    
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-bar a:hover{
+    background-color: #ffffff;
+    color: #ab0b20;
+    border-radius: 5px;
+}
+
+.nav-bar button{
+    border: none;
+    background: none;
+    padding: 5px 10px;    
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-bar button:hover{
+    background-color: #ffffff;
+    color: #ab0b20;
+    border-radius: 5px;
+    cursor: pointer;
+}

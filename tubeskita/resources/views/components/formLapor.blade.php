@@ -14,8 +14,8 @@
         <div class="tipe-laporan">
             <p>Pilih Tipe Laporan</p>
             <div class="d-flex mb-5">
-                <input type="radio" name="type_laporan" value="1401"> Laporan                            
-                <input type="radio" name="type_laporan" value="1402"> Komentar                             
+                <input type="radio" name="laporan_type_id" value="1401"> Laporan                            
+                <input type="radio" name="laporan_type_id" value="1402"> Komentar                             
             </div>
         </div>
         
@@ -32,7 +32,7 @@
 
         <div class="detail-laporan">
             <label for="description">Isi Laporan</label>
-            <textarea name="description" id="" placeholder="Ketik Isi Laporan Anda*" class="form-text-box" rows="5" required>{{Request::old('description')}}</textarea>
+            <textarea name="description" id="" placeholder="Ketik Isi Laporan Anda*" class="form-text-box" rows="15" required>{{Request::old('description')}}</textarea>
             @error('description')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -51,8 +51,8 @@
         </div>
 
         <div class="category-laporan">
-            <label for="category">Kategori Laporan</label>
-            <select name="category" id="" class="form-text-box" style="width: 99%">
+            <label for="category_id">Kategori Laporan</label>
+            <select name="category_id" id="" class="form-text-box" style="width: 99%">
                 <option value="" disabled selected>Pilih Aspek Laporan Atau Komentar</option>
                 @foreach ($listKategori as $kategori)
                     <option value="{{$kategori->id}}">{{ucwords($kategori->name)}}</option>
@@ -65,12 +65,19 @@
             @enderror
         </div>
 
+        <input type="hidden" name="status_id" value="1201">
+
         <hr style="width: 99%">
 
         <div class="d-flex space-bettwen">
             <div class="file">
                 <span>Lampiran</span>
                 <input type="file" class="custom-button" name="lampiran" id="">
+                @error('lampiran')
+                <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
             <div class="send">
                 <div class="input-submit">
