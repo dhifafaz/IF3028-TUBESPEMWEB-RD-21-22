@@ -22,7 +22,7 @@
                         <p>Kategori : {{ $laporan->category->name }}</p>
                         <div class="time">
                             <p>Waktu : {{ $laporan->created_at }}</p>
-                            <a href="/detail/{{ $laporan->id }}">Lihat selengkapnya > </a>
+                            <a href="/home/detail/{{ $laporan->id }}">Lihat selengkapnya > </a>
                         </div>
                     </div>
                 </div>

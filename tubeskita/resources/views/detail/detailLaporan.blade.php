@@ -9,7 +9,7 @@
         <div class="content-detail">
             <div class="detail">
                 <p>Detail Laporan</p>
-                <a href="/">Kembali ke home</a>
+                <a href="/home">Kembali ke home</a>
                 <hr>
                 <h1>{{ $laporan->title }}</h1>
                 @if ($laporan->anonim == 1)
@@ -60,10 +60,17 @@
                     <div class="aspek">
                         <p>Aspek : {{ $laporan->category->name }}</p>
                     </div>
-                </div>                
-                <div class="hapus">
-                    <button type="button" class="hapus-button">Hapus</button>
-                </div>                
+                </div>   
+                
+                <div class="edit">
+                    <button type="button" class="edit-button">Edit</button>
+                </div>
+
+                <form action="/home/detail/{{ $laporan->id }}" method="post" class="hapus">
+                    @method('delete')
+                    @csrf
+                    <button onclick="return confirm('Hapus laporan / komentar ?')" class="hapus-button">Hapus</button>
+                </form>            
             </div>
         
         </div>

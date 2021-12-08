@@ -19,4 +19,6 @@ class HomeController extends Controller
             'listLaporan' => Laporan::search(request(['search']))->orderBy('created_at', 'desc')->paginate(5)
         ]);
     }
+
+   
 }

@@ -18,9 +18,9 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return redirect('/home');
+});
 
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -30,7 +30,7 @@ Route::get('/register', [RegisterController::class, 'register'])->middleware('gu
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/buat-laporan', [LaporanController::class, 'index'])->middleware('auth');
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::post('/lapor', [LaporanController::class, 'submit'])->middleware('auth');
 
@@ -38,4 +38,5 @@ Route::post('/lapor', [LaporanController::class, 'submit'])->middleware('auth');
 //     return view('detail.detailLaporan');
 // });
 
-Route::get('/detail/{id}', [LaporanController::class, 'show'])->middleware('auth');
+Route::get('/home/detail/{id}', [LaporanController::class, 'show'])->middleware('auth');
+Route::delete('/home/detail/{id}', [LaporanController::class, 'destroy'])->middleware('auth');

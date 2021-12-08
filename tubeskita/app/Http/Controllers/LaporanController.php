@@ -81,4 +81,11 @@ class LaporanController extends Controller
             'laporan' => $id,
         ]);
     }
+
+    public function destroy($id)
+    {
+        // $id->delete();
+        Laporan::where('id', $id)->delete();
+        return redirect('/home')->with('success', 'Berhasil delete data');
+    }
 }
