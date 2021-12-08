@@ -1,3 +1,7 @@
+*{
+    font-family:'Verdana', sans-serif;        
+}
+
 body{
     margin: 0px !important;
 }
@@ -6,6 +10,8 @@ body{
     padding: 20px;
     background-color: #0fc439;
     color: white;
+    margin-bottom:20px;
+    border-radius: 5px;
 }
 
 .alert-danger {
@@ -31,67 +37,97 @@ body{
     color: black;
 }
 
-
 .top-background{
-    background-image: url(../images/laporcoverhomepage.jpg);
-    padding : 50px;
+    padding : 10px 0px 50px 0px;
+
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 0px 50px;
 }
 
-.left-menu{
+.left-menu {
     display: flex;
     align-items: center;
+    gap: 15px;
+}
 
+.left-menu img{
+    width: 20%;
+    padding :10px;        
+    border: 2px solid #ab0b20;
+    border-radius: 5px;
 }
 
 .nav-bar{
     display: flex;
     gap: 15px;
+    align-items: flex-end;    
 }
 
 .nav-bar a, .left-menu a{
     padding: 5px 10px;    
     text-decoration: none;
-    color: #ffffff;
+    color: #ab0b20;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px !important;
+    
 }
 
-.nav-bar a:hover{
-    background-color: #ffffff;
-    color: #ab0b20;
+.nav-bar a:hover, .left-menu a:hover{
+    color:#ffffff;
+    background-color: #ab0b20;
     border-radius: 5px;
 }
 
-.nav-bar button{
-    border: none;
+.nav-bar button{    
+    border: none; 
     background: none;
     padding: 5px 10px;    
     text-decoration: none;
-    color: #ffffff;
+    color: #ab0b20;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;    
 }
 
 .nav-bar button:hover{
-    background-color: #ffffff;
-    color: #ab0b20;
+    background-color: #ab0b20;
+    color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.user-info{
-    font-size: 18px;
+.user-info{    
+    color:#ab0b20;
+    font-size: 20px; 
+    margin: 0px;
+    margin-left: 20px;
 }
 
 .logout-button{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.desc-page{
+    background-image: url(../images/laporcoverhomepage.jpg);
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 0px;
+}
+
+.desc-page h1 {
+    font-weight: 600;
+    margin: 0px;    
+}
+
+.desc-page p {
+    font-size:24px;
+    margin-bottom: 0px;
 }
