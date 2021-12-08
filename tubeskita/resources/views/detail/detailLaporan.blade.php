@@ -7,6 +7,7 @@
 @section('content')
     @include('components.navbarAuth')
         <div class="content-detail">
+            @include('components.alertPost')
             <div class="detail">
                 <p class="title-detail">Detail Laporan</p>                
                 <hr>
