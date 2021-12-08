@@ -40,3 +40,4 @@ Route::post('/lapor', [LaporanController::class, 'submit'])->middleware('auth');
 
 Route::get('/home/detail/{id}', [LaporanController::class, 'show'])->middleware('auth');
 Route::delete('/home/detail/{id}', [LaporanController::class, 'destroy'])->middleware('auth');
+Route::get('/home/detail/{id}/edit', [LaporanController::class, 'edit'])->middleware('auth');

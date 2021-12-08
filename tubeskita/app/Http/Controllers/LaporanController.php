@@ -88,4 +88,15 @@ class LaporanController extends Controller
         Laporan::where('id', $id)->delete();
         return redirect('/home')->with('success', 'Berhasil delete data');
     }
+
+    public function edit($id)
+    {
+        $laporan = Laporan::find($id);
+        $listKategori = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
+        return view('laporan.edit', [
+            'title' => 'Edit',
+            'laporan' => $laporan,
+            'listKategori' => $listKategori,
+        ]);
+    }
 }
