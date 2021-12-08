@@ -38,8 +38,7 @@ body{
 }
 
 .top-background{
-    padding : 10px 0px 50px 0px;
-
+    padding : 10px 0px 20px 0px;
 }
 
 .logo {
@@ -132,18 +131,28 @@ body{
     margin-bottom: 0px;
 }
  
-  .cancelbtn, .deletebtn {
-    float: left;
-    width: 50%;
+  .cancelbtn, .deletebtn, .editbtn {    
+    width: 200px;
+    padding : 5px;
+    font-size: 16px;
+  }
+
+  .cancelbtn:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .deletebtn:hover{
+    box-shadow: rgba(250, 25, 0, 0.2) 0px 7px 29px 0px;
   }
 
   .cancelbtn {
     background-color: #ccc;
-    color: black;
+    color: black;    
   }
   
   .deletebtn {
-    background-color: #f44336;
+    background-color: #ab0b20;
+    color:#ffffff;
   }
  
   .container {
@@ -151,7 +160,6 @@ body{
     text-align: center;
   }
   
-
   .modal {
     display: none; 
     position: fixed;
@@ -171,6 +179,7 @@ body{
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
     width: 80%; 
+    border-radius: 10px;
   }
 
   hr {
