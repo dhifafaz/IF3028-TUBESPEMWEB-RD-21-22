@@ -11,22 +11,23 @@
     </div>
     @if ($listLaporan->count() > 0)
         <div class="list-laporan">                
-            <p>Laporan Terkini</p>
+            <p class="list-title">Laporan Terkini</p>
             <hr>
             @foreach ($listLaporan as $laporan)
                 <div class="detail-laporan" id="{{ $laporan->id }}">
                     <h3>{{ $laporan->title }}</h3>
-                    <p>{{ $laporan->description }}</p>
-                    <div class="lampiran">
-                        @if ($laporan->lampiran != null)
-                            <p>Lampiran : {{ $laporan->lampiran }}</p>
-                        @else
-                            <p>Tidak ada lampiran</p>
-                        @endif
+                    <p class="dtl-lapor">{{ $laporan->description }}</p>                    
+                    <p>Kategori : {{ $laporan->category->name }}</p>
+                    @if ($laporan->lampiran != null)
+                        <p>Lampiran : {{ $laporan->lampiran }}</p>
+                    @else
+                        <p>Tidak ada lampiran</p>
+                    @endif
+                    <div class="keterangan">                                                                        
                         <p>Tipe : {{ $laporan->type->name }}</p>
                         <div class="time">
                             <p>Waktu : {{ $laporan->created_at }}</p>
-                            <a href="/home/detail/{{ $laporan->id }}">Lihat selengkapnya > </a>
+                            <a href="/home/detail/{{ $laporan->id }}">Lihat selengkapnya</a>
                         </div>
                     </div>
                 </div>

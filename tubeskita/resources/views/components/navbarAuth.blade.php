@@ -1,12 +1,12 @@
 <div class="top-background">
     <div class="logo">
         <div class="left-menu">
-            <img src="{{ asset('assets') }}/images/logo-white (1).png">
-            <a href="/home">Home</a>
-            <a href="/buat-laporan">Lapor</a>
-        </div>
-        <div class="nav-bar">
+            <img src="{{ asset('assets') }}/images/logo-itera.png">
             <h1 class="user-info">Welcome {{ auth()->user()->name }}</h1>
+            <a href="/home">HOME</a>
+            <a href="/buat-laporan">LAPOR</a>
+        </div>
+        <div class="nav-bar">            
             <form action="/logout" method="post" class="logout-button">
                 @csrf
                 <button type="submit" class="btn btn-danger">KELUAR</button>

@@ -1,9 +1,9 @@
 <div class="top-background">
     <div class="logo">
         <div class="left-menu">
-            <img src="{{ asset('assets') }}/images/logo-white (1).png">
-            <a href="/home">Home</a>
-            <a href="/buat-laporan">Lapor</a>
+            <img src="{{ asset('assets') }}/images/logo-itera.png">
+            <a href="/home">HOME</a>
+            <a href="/buat-laporan">LAPOR</a>
         </div>
         <div class="nav-bar">
             <a href="/login">MASUK</a>

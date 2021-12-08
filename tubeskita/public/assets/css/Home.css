@@ -1,32 +1,18 @@
-*{
-    font-family:'Verdana', sans-serif;        
-}
-
-.desc-page{
-    text-align: center;
-    color: #ffffff;
-}
-
-.desc-page h1 {
-    font-weight: 600;    
-}
-
-.desc-page p {
-    font-size:24px;
-}
-
 .content-home {
     margin: 20px;
 }
 
 .search-bar {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
 }
 
 .search {
     padding: 8px;
     width: 60%;
+    border: 2px solid #ab0b20;
+    border-radius:5px;
+    font-size: 16px;
 }
 
 .button {
@@ -36,13 +22,24 @@
     border-radius: 3px;
     border: 0px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .add-laporan{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
+}
+
+.add-laporan a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+}
+
+.add-laporan a:hover{
+    color:#ab0b20;
 }
 
 .list-laporan{
@@ -50,15 +47,44 @@
     margin-bottom: 20px;
 }
 
-.lampiran {
+.list-title {
+    font-size:20px !important;
+}
+
+.detail-laporan p{
+    font-size: 18px !important;
+    margin-bottom: 0px;
+}
+
+.dtl-lapor{
+    text-overflow: ellipsis;
+    overflow: hidden;     
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+
+.keterangan {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
+}
+
+.keterangan p{
+    margin-bottom: 20px;
 }
 
 .time{
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.time a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ab0b20;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 hr{
@@ -69,7 +95,6 @@ footer{
     margin-top: 40px;
     text-align: center;
 }
-
 
 .content{
     padding: 30px;
@@ -98,6 +123,26 @@ ul{
 .test{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
     align-self: center;
+}
+
+.test a{
+    text-decoration: none;
+    font-size: 18px; 
+    color: #ab0b20;   
+}
+
+.test a:hover:not(.active){
+    color: #ab0b20;
+    background-color: #dddd;
+    padding:5px;
+    border-radius: 5px;
+}
+
+.active span{
+    color: #ffffff;
+    background-color: #ab0b20;
+    padding:5px;
+    border-radius: 5px;
 }
