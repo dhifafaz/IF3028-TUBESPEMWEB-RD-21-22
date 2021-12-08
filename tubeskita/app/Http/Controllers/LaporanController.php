@@ -139,7 +139,7 @@ class LaporanController extends Controller
             'status_id' => $request->status_id,
         ]);
 
-        return redirect()->back()->with('success', 'Berhasil update data');
+        return redirect('/buat-laporan')->with('success', 'Berhasil update laporan');
 
     }
 }

@@ -21,6 +21,9 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return redirect('/home');
 });
+// Route::get('/phpinff', function () {
+//     return phpinfo();
+// });
 
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
