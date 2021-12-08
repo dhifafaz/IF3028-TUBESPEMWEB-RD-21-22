@@ -42,7 +42,7 @@ class LaporanController extends Controller
 
         $validated = $request->validate([
             'title' => 'required',
-            'description' => 'required',
+            'description' => 'required|min:50',
             'tgl_kejadian'=> 'required',
             'category_id' => 'required',   
         ]);
@@ -122,7 +122,7 @@ class LaporanController extends Controller
 
         $validated = $request->validate([
             'title' => 'required',
-            'description' => 'required',
+            'description' => 'required|min:50',
             'tgl_kejadian'=> 'required',
             'category_id' => 'required',   
         ]);

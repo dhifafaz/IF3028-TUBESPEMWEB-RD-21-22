@@ -208,7 +208,12 @@ body{
     display: table;
   }
   
- 
+.invalid-feedback{
+    color: red;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 5px;
+}
   @media screen and (max-width: 300px) {
     .cancelbtn, .deletebtn {
        width: 100%;
