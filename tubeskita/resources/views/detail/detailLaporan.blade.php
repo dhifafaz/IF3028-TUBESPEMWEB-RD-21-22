@@ -22,13 +22,15 @@
             </div>
             <div class="lampiran">
                 <p>Lampiran :</p>
-                @if (pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpg' 
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'png'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'svg'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'raw'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'gif'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpeg'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'tiff')
+                @if ($laporan->lampiran == null)
+                    <p><strong>Tidak ada lampiran</strong></p>
+                @elseif (pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpg' 
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'png'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'svg'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'raw'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'gif'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpeg'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'tiff')
                     <div class="lampiran-img">
                         <img src="{{ asset('storage') }}/lampiran/{{ $laporan->lampiran }}" alt="">
                     </div>
@@ -62,9 +64,7 @@
                     </div>
                 </div>   
                 
-                <div class="edit">
-                    <button type="button" class="edit-button">Edit</button>
-                </div>
+                <a href="/home/detail/{{ $laporan->id }}/edit" onclick="return confirm('Edit laporan / komentar ?')"class="edit">Edit</a>
 
                 <form action="/home/detail/{{ $laporan->id }}" method="post" class="hapus">
                     @method('delete')

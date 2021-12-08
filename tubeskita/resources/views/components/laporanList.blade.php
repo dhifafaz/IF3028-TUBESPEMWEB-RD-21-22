@@ -18,7 +18,11 @@
                     <h3>{{ $laporan->title }}</h3>
                     <p>{{ $laporan->description }}</p>
                     <div class="lampiran">
-                        <p>Lampiran : {{ $laporan->lampiran }}</p>
+                        @if ($laporan->lampiran != null)
+                            <p>Lampiran : {{ $laporan->lampiran }}</p>
+                        @else
+                            <p>Tidak ada lampiran</p>
+                        @endif
                         <p>Kategori : {{ $laporan->category->name }}</p>
                         <div class="time">
                             <p>Waktu : {{ $laporan->created_at }}</p>
