@@ -22,18 +22,20 @@
             </div>
             <div class="lampiran">
                 <p>Lampiran :</p>
-                @if (pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpg' 
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'png'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'svg'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'raw'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'gif'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpeg'
-                    || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'tiff')
+                @if ($laporan->lampiran == '')
+                    <p><strong>Tidak ada lampiran</strong></p>
+                @elseif (pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpg' 
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'png'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'svg'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'raw'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'gif'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'jpeg'
+                        || pathinfo($laporan->lampiran, PATHINFO_EXTENSION) == 'tiff')
                     <div class="lampiran-img">
                         <img src="{{ asset('storage') }}/lampiran/{{ $laporan->lampiran }}" alt="">
                     </div>
                 @else
-                <div class="detail-lampiran" onclick="alert('Opening Materi....')">
+                <div class="detail-lampiran" onclick="alert('Opening file....')">
                     <img class="detail-lampiran-img dTugas-img" src="{{ asset('assets') }}/images/folders.png">
                     <div class="detail-lampiran-info">
                         <div class="detail-lampiran-text">
@@ -50,7 +52,7 @@
                         </a>
                     </div>
                 @endif
-                {{-- <img src="{{ asset('assets') }}/images/logo.png" width="100px"> --}}
+
             </div>
             <div class="detail-bawah">
                 <div class="keterangan">
@@ -62,15 +64,42 @@
                     </div>
                 </div>   
                 
-                <div class="edit">
-                    <button type="button" class="edit-button">Edit</button>
+                <button onclick="document.getElementById('modal-edit').style.display='block'" class="edit-button">Edit</button>
+                
+                <div id="modal-edit" class="modal">
+                    <span onclick="document.getElementById('modal-edit').style.display='none'" class="close" title="Close Modal">×</span>
+                    <div class="modal-content">
+                        
+                        <div class="container">
+                            <h1>Edit Laporan</h1>
+                            <p>Apakah kamu akan mengedit laporan ?</p>
+                            
+                            <div class="clearfix">
+                                <button type="button" onclick="document.getElementById('modal-edit').style.display='none'" class="cancelbtn">Batal</button>
+                                <a href="/home/detail/{{ $laporan->id }}/edit" class="edit">Edit</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <button onclick="document.getElementById('modal-hapus').style.display='block'" class="hapus-button">Hapus</button>
 
-                <form action="/home/detail/{{ $laporan->id }}" method="post" class="hapus">
-                    @method('delete')
-                    @csrf
-                    <button onclick="return confirm('Hapus laporan / komentar ?')" class="hapus-button">Hapus</button>
-                </form>            
+                <div id="modal-hapus" class="modal">
+                    <span onclick="document.getElementById('modal-hapus').style.display='none'" class="close" title="Close Modal">×</span>
+                    <form class="modal-content"action="/home/detail/{{ $laporan->id }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <div class="container">
+                            <h1>Hapus Laporan</h1>
+                            <p>Apakah kamu akan benar-benar menghapus laporan ?</p>
+                            
+                            <div class="clearfix">
+                                <button type="button" onclick="document.getElementById('modal-hapus').style.display='none'" class="cancelbtn">Batal</button>
+                                <button type="submit" class="deletebtn">Beneran Hapus</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         
         </div>

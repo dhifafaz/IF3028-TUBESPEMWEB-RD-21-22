@@ -20,4 +20,5 @@
 <body>
 	@yield('content')
 </body>
+<script src="{{ asset('assets') }}/js/dTugas.js"></script>
 </html>

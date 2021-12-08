@@ -64,12 +64,12 @@
     -webkit-box-orient: vertical;  
 }
 
-.lampiran {
+.keterangan {
     display: flex;
     justify-content: space-between;    
 }
 
-.lampiran p{
+.keterangan p{
     margin-bottom: 20px;
 }
 

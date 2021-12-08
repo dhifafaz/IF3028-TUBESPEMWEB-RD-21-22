@@ -3,8 +3,8 @@
 @section('content')
 
 @auth
+    @include('components.navbarAuth')  
     @include('components.alertPost')
-    @include('components.navbarAuth')    
     @include('components.laporanList')
 
 @else

@@ -81,8 +81,8 @@
             <label for="category">Kategori Laporan</label>
             <select name="category" id="" class="form-text-box" style="width: 99%">
                 <option value="" disabled selected>Pilih Kategori Laporan Anda</option>
-                @foreach ($listKategori as $kategori)
-                    <option value="{{$kategori->id}}">{{ucwords($kategori->name)}}</option>
+                @foreach ($listCategory as $category)
+                    <option value="{{$category->id}}">{{ucwords($category->name)}}</option>
                 @endforeach
             </select>
             @error('category')

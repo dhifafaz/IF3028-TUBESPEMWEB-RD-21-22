@@ -14,8 +14,16 @@
         <div class="tipe-laporan">
             <p>Pilih Tipe Laporan</p>
             <div class="d-flex mb-5">
-                <input type="radio" name="laporan_type_id" value="1401"> Laporan                            
-                <input type="radio" name="laporan_type_id" value="1402"> Komentar                             
+                @if (old('laporan_type_id') == 1401)
+                    <input type="radio" name="laporan_type_id" value="1401" checked="checked"> Laporan   
+                    <input type="radio" name="laporan_type_id" value="1402"> Komentar
+                @elseif (old('laporan_type_id') == 1402)                       
+                    <input type="radio" name="laporan_type_id" value="1401" > Laporan   
+                    <input type="radio" name="laporan_type_id" value="1402" checked="checked"> Komentar
+                @else                             
+                    <input type="radio" name="laporan_type_id" value="1401" required> Laporan   
+                    <input type="radio" name="laporan_type_id" value="1402" > Komentar
+                @endif
             </div>
         </div>
         
@@ -52,10 +60,15 @@
 
         <div class="category-laporan">
             <label for="category_id">Kategori Laporan</label>
-            <select name="category_id" id="" class="form-text-box" style="width: 99%">
+            <select name="category_id" id="" class="form-text-box" style="width: 99%" required>
                 <option value="" disabled selected>Pilih Aspek Laporan Atau Komentar</option>
-                @foreach ($listKategori as $kategori)
-                    <option value="{{$kategori->id}}">{{ucwords($kategori->name)}}</option>
+                @foreach ($listCategory as $category)
+                    {{-- <option value="{{$category->id}}">{{ucwords($category->name)}}</option> --}}
+                    @if (old('category_id') == $category->id)
+                        <option value="{{ $category->id }}" selected >{{ ucwords($category->name) }}</option>
+                    @else
+                        <option value="{{ $category->id }}">{{ ucwords($category->name) }}</option>
+                    @endif
                 @endforeach
             </select>
             @error('category')
@@ -81,8 +94,13 @@
             </div>
             <div class="send">
                 <div class="input-submit">
-                    <input type="radio" name="anonim" id="" value="1" class="radio-subs"><span class="radio-sub">Anonim</span>
+                @if (old('anonim') == 1)
+                    <input type="radio" checked="checked" name="anonim" id="" value="1" class="radio-subs"><span class="radio-sub">Anonim</span>
                     <input type="radio" name="anonim" id="" value="0" class="radio-subs"><span class="radio-sub">Publik</span>                    
+                @else
+                    <input type="radio" name="anonim" id="" value="1" class="radio-subs"><span class="radio-sub">Anonim</span>
+                    <input type="radio" checked="checked" name="anonim" id="" value="0" class="radio-subs"><span class="radio-sub">Publik</span>                    
+                @endif
                 </div>
                 <div class="btn-submit">
                     <input type="submit" value="Lapor!" class="btn-lapor">

@@ -18,11 +18,11 @@ class LaporanController extends Controller
     public function index()
     {
 
-        $listKategori = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
+        $listCategory = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
         
         return view('laporan.lapor', [
             'title' => 'Lapor',
-            'listKategori' => $listKategori,
+            'listCategory' => $listCategory,
         ]);
     }
     
@@ -30,23 +30,28 @@ class LaporanController extends Controller
     {
         // return $request->file('lampiran')->store('lampiran');
         // dd($request->all()); 
+        $filename = '';
         if($request->file('lampiran')){
             // $validated['lampiran'] = $request->file('lampiran')->getClientOriginalName()->store('lampiran');
             $request->file('lampiran')->move('storage/lampiran', $request->file('lampiran')->getClientOriginalName());
+            $filename = $request->file('lampiran')->getClientOriginalName();
+        }
+        else{
+            $filename = null;
         }
 
         $validated = $request->validate([
             'title' => 'required',
             'description' => 'required',
             'tgl_kejadian'=> 'required',
-            'category_id' => 'required',  
+            'category_id' => 'required',   
         ]);
 
 
         Laporan::create([
             'title' => $validated['title'],
             'description' => $validated['description'],
-            'lampiran' => $request->file('lampiran')->getClientOriginalName(),
+            'lampiran' => $filename,
             'anonim' => $request->anonim,
             'tgl_kejadian' => $validated['tgl_kejadian'],
             'user_id' => $request->user_id,
@@ -92,11 +97,49 @@ class LaporanController extends Controller
     public function edit($id)
     {
         $laporan = Laporan::find($id);
-        $listKategori = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
+        $listCategory = set_library::where('category_id', '13')->orderBy('name', 'asc')->get();
         return view('laporan.edit', [
             'title' => 'Edit',
             'laporan' => $laporan,
-            'listKategori' => $listKategori,
+            'listCategory' => $listCategory,
         ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        // $laporan = Laporan::find($id);
+        // $laporan->title = $request->title;
+        // $laporan->description = $request->description;
+        $filename = '';
+        if($request->file('lampiran')){
+            // $validated['lampiran'] = $request->file('lampiran')->getClientOriginalName()->store('lampiran');
+            $request->file('lampiran')->move('storage/lampiran', $request->file('lampiran')->getClientOriginalName());
+            $filename = $request->file('lampiran')->getClientOriginalName();
+        }
+        else{
+            $filename = Laporan::find($id)->lampiran;
+        }
+
+        $validated = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'tgl_kejadian'=> 'required',
+            'category_id' => 'required',   
+        ]);
+
+        Laporan::where('id', $id)->update([
+            'title' => $validated['title'],
+            'description' => $validated['description'],
+            'lampiran' => $filename,
+            'anonim' => $request->anonim,
+            'tgl_kejadian' => $validated['tgl_kejadian'],
+            'user_id' => $request->user_id,
+            'category_id' => $validated['category_id'],
+            'laporan_type_id' => $request->laporan_type_id,
+            'status_id' => $request->status_id,
+        ]);
+
+        return redirect('/buat-laporan')->with('success', 'Berhasil update laporan');
+
     }
 }

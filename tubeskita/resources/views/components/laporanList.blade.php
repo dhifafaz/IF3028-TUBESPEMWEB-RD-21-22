@@ -1,5 +1,5 @@
 <div class="content-home">
-    <form action="/" class="search-bar" >
+    <form action="/home" class="search-bar" >
         <input class="search" type="text" name="search" value="{{ request('search') }}" placeholder="Search...">
         <button class="button" type="submit" >Search</button>
     </form>
@@ -16,12 +16,15 @@
             @foreach ($listLaporan as $laporan)
                 <div class="detail-laporan" id="{{ $laporan->id }}">
                     <h3>{{ $laporan->title }}</h3>
-                    <p class="dtl-lapor">{{ $laporan->description }}</p>
-                    <p>Lampiran : {{ $laporan->lampiran }}</p>
-                    <div class="lampiran">
-                        <div>                            
-                            <p>Kategori : {{ $laporan->category->name }}</p>
-                        </div>                        
+                    <p class="dtl-lapor">{{ $laporan->description }}</p>                    
+                    <p>Kategori : {{ $laporan->category->name }}</p>
+                    @if ($laporan->lampiran != null)
+                        <p>Lampiran : {{ $laporan->lampiran }}</p>
+                    @else
+                        <p>Tidak ada lampiran</p>
+                    @endif
+                    <div class="keterangan">                                                                        
+                        <p>Tipe : {{ $laporan->type->name }}</p>
                         <div class="time">
                             <p>Waktu : {{ $laporan->created_at }}</p>
                             <a href="/home/detail/{{ $laporan->id }}">Lihat selengkapnya</a>
