@@ -1,0 +1,92 @@
+h1{
+    font-size: 60px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin:auto;
+    width:95%;
+    /* border: 2px solid black; */
+    padding:5px;
+}
+.title{
+    padding:40px;
+    text-align: center;
+}
+ .search-cont{
+     text-align: center;
+ }
+
+ .buat{
+    text-align: justify;
+    margin:auto;
+    width:73%
+}
+
+.komen{
+    text-align:left;
+    margin:auto;
+    width:100%;
+}
+
+select, option {
+    width: 220px;
+  }
+  
+option {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+ .search{
+     padding:20px;
+     border:1px solid black;
+     width:60%;
+     /* border-right:none; */
+     margin:0;
+ }
+
+ .search-btn{
+    padding:20px;
+    border:1px solid black;
+    width:10%; 
+    margin:0; 
+ }
+
+.custom-select{
+    width: 100px;
+}
+
+.submit{
+    text-align: right;
+}
+
+ .add{
+     text-align: center;
+     padding:20px;
+ }
+ .laporan{
+     text-align: justify;
+     margin:auto;
+     width:100%
+ }
+
+ .lampiran{
+     padding:10px;
+     float:left;
+ }
+
+ .waktu{
+     padding:10px;
+     float:right;
+     text-align: right;
+ }
+
+ .selengkapnya{
+     padding:10px;
+     float:right;
+     text-align: right;
+ }
+ hr{
+     border-top: 2px solid black;
+ }

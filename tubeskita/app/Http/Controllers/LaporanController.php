@@ -117,7 +117,7 @@ class LaporanController extends Controller
             $filename = $request->file('lampiran')->getClientOriginalName();
         }
         else{
-            $filename = null;
+            $filename = Laporan::find($id)->lampiran;
         }
 
         $validated = $request->validate([
