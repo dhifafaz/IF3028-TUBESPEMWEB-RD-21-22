@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-    
+        <div class="logo-regist">
+            <img src="{{ asset('assets') }}/images/logo-itera.png">
+        </div>
         <div class="register-card">
             <div class="register-title">Masuk</div>
             @if(session()->has('success'))
