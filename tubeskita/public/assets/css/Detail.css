@@ -1,36 +1,28 @@
-*{
-    font-family:'Verdana', sans-serif;        
-}
-
-.desc-page{
-    text-align: center;
-    color: #ffffff;
-}
-
-.desc-page h1 {
-    font-weight: 600;    
-}
-
-.desc-page p {
-    font-size:24px;
-}
-
 .content-detail{
-    margin: 20px;
+    margin: 0px 50px;
 }
 
 .detail {
     margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.title-detail{
+    text-align: center;
+    font-size: 22px !important;
 }
 
 .lampiran{
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .detail-bawah{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .keterangan {
@@ -38,7 +30,7 @@
     gap: 20px;
 }
 
-.hapus-button{
+.hapus-button, .edit-button{
     font-size: 16px;
     padding: 8px;
     border: 3px solid #ab0b20;
@@ -47,13 +39,13 @@
     color: #ab0b20;
 }
 
-.hapus-button:hover{
+.hapus-button:hover, .edit-button:hover{
     background-color:#ab0b20;
     color : #ffffff;
 }
 
 hr{
-    border: 1px solid #AB0B20;
+    border: 1px solid #ab0b20;
 }
 
 .detail-lampiran {
@@ -103,3 +95,32 @@ hr{
     width: 100%;
     height: 100%;
 }
+
+.tombol{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.clearfix {
+    font-size: 18px;
+}
+
+.clearfix button{
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;     
+}
+
+.editbtn{
+    text-decoration: none;
+    color:#ffffff;
+    background-color: #c8a848;
+    padding: 5px 90px;
+    border-radius: 5px;    
+}
+
+.editbtn:hover{
+    box-shadow: rgba(242, 222, 48, 0.2) 0px 7px 29px 0px;
+}
+
