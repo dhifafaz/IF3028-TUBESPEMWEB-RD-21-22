@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
+        <div class="logo-regist">
+            <img src="{{ asset('assets') }}/images/logo-itera.png">
+        </div>
         <div class="register-card">
             <div class="register-title">Daftar</div>
             <div class="register-body">
@@ -85,6 +88,9 @@
                     <a class="daftar" href="/login">MASUK SEKARANG</a>
                 </div>                
             </div>
-        </div>            
+        </div>        
+        <div class="back-btn">
+            <a href="/">KEMBALI KE BERANDA</a>
+        </div>
 
 @endsection
