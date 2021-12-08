@@ -1,5 +1,5 @@
 <div class="content-home">
-    <form action="/" class="search-bar" >
+    <form action="/home" class="search-bar" >
         <input class="search" type="text" name="search" value="{{ request('search') }}" placeholder="Search...">
         <button class="button" type="submit" >Search</button>
     </form>

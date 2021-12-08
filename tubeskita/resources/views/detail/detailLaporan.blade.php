@@ -66,11 +66,29 @@
                 
                 <a href="/home/detail/{{ $laporan->id }}/edit" onclick="return confirm('Edit laporan / komentar ?')"class="edit">Edit</a>
 
-                <form action="/home/detail/{{ $laporan->id }}" method="post" class="hapus">
+                {{-- <form action="/home/detail/{{ $laporan->id }}" method="post" class="hapus">
                     @method('delete')
                     @csrf
                     <button onclick="return confirm('Hapus laporan / komentar ?')" class="hapus-button">Hapus</button>
-                </form>            
+                </form>             --}}
+                <button onclick="document.getElementById('id01').style.display='block'" class="hapus-button">Hapus</button>
+
+                <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                <form class="modal-content"action="/home/detail/{{ $laporan->id }}" method="post">
+                    @method('delete')
+                    @csrf
+                    <div class="container">
+                        <h1>Hapus Laporan</h1>
+                        <p>Apakah kamu akan benar-benar menghapus laporan ?</p>
+                        
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Batal</button>
+                            <button type="submit" class="deletebtn">Beneran Hapus</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
             </div>
         
         </div>

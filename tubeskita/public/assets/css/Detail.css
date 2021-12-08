@@ -38,7 +38,7 @@
     gap: 20px;
 }
 
-.hapus button{
+.hapus-button{
     font-size: 16px;
     padding: 8px;
     border: 3px solid #ab0b20;
@@ -47,7 +47,7 @@
     color: #ab0b20;
 }
 
-.hapus button:hover{
+.hapus-button:hover{
     background-color:#ab0b20;
     color : #ffffff;
 }

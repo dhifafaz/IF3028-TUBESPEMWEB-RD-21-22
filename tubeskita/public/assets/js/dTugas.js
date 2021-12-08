@@ -1,9 +1,10 @@
- // SEMUA ONCLICK=ALERT(*) SAMA LOG YG DIBAWAH CUMAN BUAT DEBUGGING
-console.log("JS-JQuery Running")
 
+// Get the modal
+var modal = document.getElementById('id01');
 
-// MATERI OPTION
-$('.dTugas-material-download').children("a").click(function (e) { 
-    e.stopPropagation()
-    alert('Downloading Materi....')
-});
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
