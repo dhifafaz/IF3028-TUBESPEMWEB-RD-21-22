@@ -23,7 +23,7 @@
                         @else
                             <p>Tidak ada lampiran</p>
                         @endif
-                        <p>Kategori : {{ $laporan->category->name }}</p>
+                        <p>Tipe : {{ $laporan->type->name }}</p>
                         <div class="time">
                             <p>Waktu : {{ $laporan->created_at }}</p>
                             <a href="/home/detail/{{ $laporan->id }}">Lihat selengkapnya > </a>

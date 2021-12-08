@@ -21,7 +21,7 @@
                     <input type="radio" name="laporan_type_id" value="1401" > Laporan   
                     <input type="radio" name="laporan_type_id" value="1402" checked="checked"> Komentar
                 @else                             
-                    <input type="radio" name="laporan_type_id" value="1401" > Laporan   
+                    <input type="radio" name="laporan_type_id" value="1401" required> Laporan   
                     <input type="radio" name="laporan_type_id" value="1402" > Komentar
                 @endif
             </div>
@@ -60,7 +60,7 @@
 
         <div class="category-laporan">
             <label for="category_id">Kategori Laporan</label>
-            <select name="category_id" id="" class="form-text-box" style="width: 99%">
+            <select name="category_id" id="" class="form-text-box" style="width: 99%" required>
                 <option value="" disabled selected>Pilih Aspek Laporan Atau Komentar</option>
                 @foreach ($listCategory as $category)
                     {{-- <option value="{{$category->id}}">{{ucwords($category->name)}}</option> --}}
