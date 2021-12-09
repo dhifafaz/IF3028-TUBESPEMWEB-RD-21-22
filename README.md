@@ -175,7 +175,7 @@ Fitur berikut merupakan fitur Login website Lapor Prodi Teknik Informatika yang 
 Fitur berikut merupakan fitur Home website Lapor Prodi Teknik Informatika yang berfungsi untuk menampilkan laporan atau komentar yang sudah dibuat oleh pengguna website. Di dalam page home juga di sediakan fitur untuk membuat laporan atau komentar, sehingga ketika pengguna mengklik fitur "Buat laporan/komentar" maka akan  berpindah ke page "Buat laporan/komentar". Di dalam page home juga disediakan fitur "search" yang berfungsi untuk mencari judul laporan yang sudah dibuat oleh pengguna website. Selain itu di dalam page home ini juga disediakan fitur untuk melihat detail laporan yang sudah dibuat oleh para pengguna website.
 
 #### 4. Fitur Buat Laporan/Komentar
-![](tampilan/Buat Laporan-page.png)
+![](tampilan/buatLaporan-page.png)
 Fitur berikut merupakan fitur Buat Laporan/Komentar website Lapor Prodi Teknik Informatika yang berfungsi untuk membuat laporan atau komentar secara lengkap. Di dalam fitur ini pengguna dapat memaparkan laporan atau komentar mereka secara lengkap. Kemudian pengguna juga dapat memasukkan tanggal saat mereka membuat laporan. Selain itu mereka juga dapat mengirim file sebagai bukti untuk memperkuat laporan mereka. Pengguna juga dapat menyembunyikan indentitas asli mereka ketika ingin mengirim Laporan ataupun Komentar.
 
 #### 5. Fitur Detail Laporan
