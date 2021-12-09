@@ -1,0 +1,243 @@
+*{
+    font-family:'Verdana', sans-serif;        
+}
+
+body{
+    margin: 0px !important;
+}
+
+.alert-success {
+    padding: 20px;
+    background-color: #0fc439;
+    color: white;
+    margin-bottom:20px;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    padding: 20px;
+    background-color: #ab0b20;
+    color: white;
+    margin-bottom:20px;
+    border-radius: 5px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.top-background{
+    padding : 10px 0px 20px 0px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 0px 50px;
+}
+
+.left-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.left-menu img{
+    width: 20%;
+    padding :10px;        
+    border: 2px solid #ab0b20;
+    border-radius: 5px;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;    
+}
+
+.nav-bar a, .left-menu a{
+    padding: 5px 10px;    
+    text-decoration: none;
+    color: #ab0b20;
+    font-weight: bold;
+    font-size: 20px !important;
+    
+}
+
+.nav-bar a:hover, .left-menu a:hover{
+    color:#ffffff;
+    background-color: #ab0b20;
+    border-radius: 5px;
+}
+
+.nav-bar button{    
+    border: none; 
+    background: none;
+    padding: 5px 10px;    
+    text-decoration: none;
+    color: #ab0b20;
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+.nav-bar button:hover{
+    background-color: #ab0b20;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-info{    
+    color:#ab0b20;
+    font-size: 20px; 
+    margin: 0px;
+    margin-left: 20px;
+}
+
+.logout-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-page{
+    background-image: url(../images/laporcoverhomepage.jpg);
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 0px;
+}
+
+.desc-page h1 {
+    font-weight: 600;
+    margin: 0px;    
+}
+
+.desc-page p {
+    font-size:24px;
+    margin-bottom: 0px;
+}
+ 
+.cancelbtn, .deletebtn, .editbtn {    
+  width: 200px;
+  padding : 5px;
+  font-size: 16px;
+}
+
+.cancelbtn:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.deletebtn:hover{
+  box-shadow: rgba(250, 25, 0, 0.2) 0px 7px 29px 0px;
+}
+
+.cancelbtn {
+  background-color: #ccc;
+  color: black;    
+}
+
+.deletebtn {
+  background-color: #ab0b20;
+  color:#ffffff;
+}
+
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: #2a2b2c83;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+  border-radius: 10px;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+  
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.invalid-feedback{
+    color: red;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+
+.form-control span {
+  visibility: hidden;
+
+}
+
+.form-control.invalid span {
+  color: #e74c3c;
+  visibility: visible;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.form-control.success input, .form-control.success textarea{
+  border-color: #2ecc71;
+}
+
+.form-control.invalid input, .form-control.invalid textarea {
+  border-color: #e74c3c;
+}
+
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .deletebtn {
+       width: 100%;
+    }
+  }

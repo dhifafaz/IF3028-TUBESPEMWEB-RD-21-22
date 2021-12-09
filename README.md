@@ -99,7 +99,69 @@ Validasi **wajib** dilakukan pada *client-side*, dengan menggunakan **javascript
 Pengguna dapat mencari laporan/komentar dengan melakukan search ke `isi laporan/komentar`.
 
 ### Penjelasan Teknis
-`Silakan isi bagian ini dengan penjelasan anda, sesuai Petunjuk Pengerjaan di atas.`
+#### 1. Clone repo GitHub ini sehingga bisa di akses secara lokal
+Bisa dilakukan dengan dua cara yaitu melalui command prompt atau pun dengan langsung mengunjungi link repositori yang ada di GitHub.
+- Dengan menggunakan command promt atau terminal, yang perlu dilakukan adalah memasukkan sintaks seperti dibawah ini.
+
+```
+git clone https://github.com/dhifafaz/IF3028-TUBESPEMWEB-RD-21-22.git
+```
+
+- Dengan langsung mengunjungi link repositori yang ada dan mengklik tombol hijau bertuliskan "clone or download" pada bagian kanan.
+
+![](tampilan/ss1.png)
+
+#### 2. cd ke folder project laravel
+Untuk dapat menjalankan project laravel nantinya perlu dijalankan perintah-perintah artisan dan composer yang hanya akan berjalan ketika kita berada dalam folder dari project laravel itu sendiri. Masukkan perintah berikut pada terminal atau CMD.
+
+```
+cd tubeskita
+```
+
+#### 3. Langkah selanjutnya adalah instalasi project dependencies
+Karena baru saja di clone dari GitHub sehingga folder dependencies yang ada di lokal komputer pemilik repo tidak ikut terupload karena ukuran file cukup besar dan dihalangi oleh gitignore. Sehingga langkah selanjutnya adalah melakukan instalasi dari dependensi composer. Masukkan perintah berikut ke terminal atau CMD.
+
+```
+composer install
+```
+
+#### 4. Mengkopi file .env.example
+Untuk menjalankan project laravel selanjutnya yang perlu dilakukan adalah melakukan konfigurasi dari environtment yang akan digunakan oleh project. Masukkan perintah berikut ke terminal atau CMD.
+
+```
+cp .env.example .env
+```
+Hasil dari kopian file tersebut terdapat settingan database yang akan digunakan, dalam hal ini kami telah mengatur database yang akan digunakan merupakan database remote yang di hosting pada sebuah server. Sehingga tidak perlu dilakukannya migrasi database dari laravel itu sendiri. Namun apabila ingin menggunakan database lokal bisa dengan membuat terlebih dahulu database kosong kemudian melakukan perubahan pada bagian berikut dari file .env yang ada.
+
+```
+DB_CONNECTION=mysql
+DB_HOST=remotemysql.com
+DB_PORT=3306
+DB_DATABASE=E91uCu8t1k
+DB_USERNAME=E91uCu8t1k
+DB_PASSWORD=p7Bd2nm91e
+```
+
+Serta mengikuti langkah selanjutnya yang ada dibawah nanti terkait migrasi database.
+
+#### 5. Men-generate kunci enkripsi aplikasi
+Laravel membutuhkan app encription key yang mana akan digenerate secara acak dan disimpan dalam file .env yang sudah ada. Aplikasi nantinya akan menggunakan kunci tersebut untuk meng-encode berbagai element yang ada. Untuk melakukannya cukup memasukkan perintah berikut ke terminal atau CMD.
+
+```
+php artisan key:generate
+```
+
+#### 6. Migrasi database
+Kelanjutan dari step 4 sebelumnya, apabila ingin menggunakan database lokal maka langkah selanjutnya adalah melakukan migrasi database agar tabel yang dibuat sesuai dengan ketentuan yang sudah dibangun sebelumnya. Berikut adalah sintaks yang perlu dijalankan pada terminal atau CMD.
+
+```
+php artisan migrate
+```
+
+Dan terakhir apabila ingin menggunakan isi dari database yang sudah kami buat bisa melakukan import file mysql yang ada dan telah kami masukkan ke dalam repo ini.
+
+### Penjelasan aplikasi dan fiturnya
+
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

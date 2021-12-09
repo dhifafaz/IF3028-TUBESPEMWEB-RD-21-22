@@ -1,0 +1,111 @@
+*{
+    font-family:'Verdana', sans-serif;        
+}
+
+html{
+    background-image: url(../images/laporcoverhomepage.jpg);
+}
+
+.logo-regist{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.logo-regist img{
+    max-width: 20%;
+    padding : 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.register-card{
+    border: 1px solid #ab0b20;
+    border-radius:5px;    
+    box-shadow: 0 5px 20px rgb(0 0 0 / 30%);
+    padding:25px;
+    width: 50%;    
+    margin: auto;  
+    margin-top: 50px;  
+    margin-bottom: 20px; 
+    background-color: #ffffff;
+}
+
+.register-title{
+    font-size: 30px;
+    text-align: center;
+    margin : 20px; 
+    font-weight: bold;
+    color:#ab0b20;   
+}
+
+.register-isi{
+    display: grid;
+    margin-bottom: 20px;
+}
+
+label{
+    color:#ab0b20;
+    margin-bottom:5px;
+    font-size: 20px;
+}
+
+input{
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ab0b20;
+    border-radius:5px;
+}
+
+.register-submit button{
+    width: 100%;
+    background-color: #ab0b20;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;    
+    border-radius:5px;
+    box-shadow: 0 5px 10px rgb(208 2 27 / 15%);
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.register-submit button:hover{
+    background-color: #c8a848;
+    color: #fff;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.daftar {
+    text-decoration: none;
+    color:#ab0b20;
+    font-weight: bold;
+}
+
+.daftar:hover{
+    color:#c8a848;
+}
+
+.back-btn{
+    text-align: center;
+    margin: 50px;
+}
+
+.back-btn a{
+    text-decoration: none; 
+    color:#ffffff;   
+    background-color: #c8a848;
+    padding: 10px 50px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.back-btn a:hover{
+    color:#ffffff;
+    background-color: #ab0b20;
+}
