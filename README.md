@@ -4,8 +4,6 @@ http://lapor.go.id, maka anda akan mendapatkan laman seperti gambar di bawah
 
 ![](tampilan/lapor.png)
 
-JADI INI PERUBAHAN GTU!!!!
-
 Kali ini kita akan membuat aplikasi web seperti `lapor` untuk mengumpulkan laporan/komentar terkait layanan
 di program studi teknik informatika ITERA.
 **Luangkan waktu untuk membaca spesifikasi ini sampai selesai.** :kissing_heart:
@@ -163,6 +161,10 @@ php artisan migrate
 Dan terakhir apabila ingin menggunakan isi dari database yang sudah kami buat bisa melakukan import file mysql yang ada dan telah kami masukkan ke dalam repo ini.
 
 ### Penjelasan aplikasi dan fiturnya
+
+#### 1. Fitur Masuk
+![](tampilan/Login-page.png)
+Fitur berikut merupakan fitur masuk website Lapor prodi .....
 
 
 ### Knowledge
