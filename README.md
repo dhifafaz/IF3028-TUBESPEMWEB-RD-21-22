@@ -109,7 +109,7 @@ git clone https://github.com/dhifafaz/IF3028-TUBESPEMWEB-RD-21-22.git
 
 - Dengan langsung mengunjungi link repositori yang ada dan mengklik tombol hijau bertuliskan "clone or download" pada bagian kanan.
 
-![](tampilan/utama.png)
+![](tampilan/ss1.png)
 
 #### 2. cd ke folder project laravel
 Untuk dapat menjalankan project laravel nantinya perlu dijalankan perintah-perintah artisan dan composer yang hanya akan berjalan ketika kita berada dalam folder dari project laravel itu sendiri. Masukkan perintah berikut pada terminal atau CMD.
@@ -133,7 +133,14 @@ cp .env.example .env
 ```
 Hasil dari kopian file tersebut terdapat settingan database yang akan digunakan, dalam hal ini kami telah mengatur database yang akan digunakan merupakan database remote yang di hosting pada sebuah server. Sehingga tidak perlu dilakukannya migrasi database dari laravel itu sendiri. Namun apabila ingin menggunakan database lokal bisa dengan membuat terlebih dahulu database kosong kemudian melakukan perubahan pada bagian berikut dari file .env yang ada.
 
-![](tampilan/utama.png)
+```
+DB_CONNECTION=mysql
+DB_HOST=remotemysql.com
+DB_PORT=3306
+DB_DATABASE=E91uCu8t1k
+DB_USERNAME=E91uCu8t1k
+DB_PASSWORD=p7Bd2nm91e
+```
 
 Serta mengikuti langkah selanjutnya yang ada dibawah nanti terkait migrasi database.
 
