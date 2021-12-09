@@ -180,7 +180,7 @@ Fitur berikut merupakan fitur Buat Laporan/Komentar website Lapor Prodi Teknik I
 
 #### 5. Fitur Detail Laporan
 Fitur berikut merupakan fitur Detail Laporan website Lapor Prodi Teknik Informatika yang berfungsi untuk melihat laporan secara lengkap. Pengguna dapat melihat waktu saat laporan dikirimkan. Kemudian dapat melihat ataupun mendownload file yang telah dilampirkan. Selain itu pengguna juga dapat mengubah ataupun menghapus laporan atau komentar yang sudah dikirimkan. 
-
+![](tampilan/detail.png)
 
 
 ### Knowledge
