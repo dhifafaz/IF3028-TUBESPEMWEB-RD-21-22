@@ -162,7 +162,11 @@ Dan terakhir apabila ingin menggunakan isi dari database yang sudah kami buat bi
 
 ### Penjelasan aplikasi dan fiturnya
 
-#### 1. Fitur Masuk
+#### 1. Fitur Registrasi
+![](tampilan/registrasi.png)
+Fitur berikut merupakan .......
+
+#### 2. Fitur Masuk
 ![](tampilan/Login-page.png)
 Fitur berikut merupakan fitur masuk website Lapor prodi .....
 
