@@ -82,7 +82,7 @@
         <div class="d-flex space-bettwen">
             <div class="file">
                 <span>Lampiran</span>
-                <input type="file" class="custom-button" name="lampiran" id="">
+                <input type="file" class="custom-button" name="lampiran" id="" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,image/*">
                 @error('lampiran')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
