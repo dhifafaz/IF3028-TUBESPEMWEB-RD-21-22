@@ -4,6 +4,8 @@ http://lapor.go.id, maka anda akan mendapatkan laman seperti gambar di bawah
 
 ![](tampilan/lapor.png)
 
+JADI INI PERUBAHAN GTU!!!!
+
 Kali ini kita akan membuat aplikasi web seperti `lapor` untuk mengumpulkan laporan/komentar terkait layanan
 di program studi teknik informatika ITERA.
 **Luangkan waktu untuk membaca spesifikasi ini sampai selesai.** :kissing_heart:
