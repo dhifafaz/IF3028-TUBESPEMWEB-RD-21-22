@@ -4,7 +4,7 @@
         Sampaikan Laporan Anda !
     </h1>
 
-    <form action="/lapor" method="post" class="form-lapor" enctype="multipart/form-data">
+    <form action="/lapor" method="post" id="form" class="form-lapor" enctype="multipart/form-data">
         @csrf
         @auth
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
@@ -28,9 +28,10 @@
         </div>
         
 
-        <div class="title-laporan">
+        <div class="title-laporan form-control">
             <label for="title">Judul Laporan</label>
-            <input type="text" placeholder="Ketik Judul laporan Anda*" name="title" class="form-text-box" value="{{ old('title') }}" required>
+            <input type="text" id="title" placeholder="Ketik Judul laporan Anda*" name="title" class="form-text-box" value="{{ old('title') }}" >
+            <span>Error message</span>
             @error('title')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -38,12 +39,13 @@
             @enderror
         </div>
 
-        <div class="detail-laporan">
+        <div class="detail-laporan form-control">
             <label for="description">Isi Laporan</label>
-            <textarea name="description" id="" placeholder="Ketik Isi Laporan Anda*" class="form-text-box" rows="15" required>{{Request::old('description')}}</textarea>
+            <textarea name="description" id="description" placeholder="Ketik Isi Laporan Anda*" class="form-text-box" rows="15" >{{Request::old('description')}}</textarea>
+            <span>Error message</span>
             @error('description')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                   {{ $message }}
                 </span>
             @enderror
         </div>
@@ -53,7 +55,7 @@
             <input type="date" placeholder="Tanggal Kejadian*" name="tgl_kejadian" class="form-text-box" value="{{ old('tgl_kejadian') }}" required>
             @error('tgl_kejadian')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    {{ $message }}
                 </span>
             @enderror
         </div>
