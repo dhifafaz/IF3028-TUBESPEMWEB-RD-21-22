@@ -162,6 +162,10 @@ Dan terakhir apabila ingin menggunakan isi dari database yang sudah kami buat bi
 
 ### Penjelasan aplikasi dan fiturnya
 
+#### 1. Fitur Masuk
+![](tampilan/Login-page.png)
+Fitur berikut merupakan fitur masuk website Lapor prodi .....
+
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.
