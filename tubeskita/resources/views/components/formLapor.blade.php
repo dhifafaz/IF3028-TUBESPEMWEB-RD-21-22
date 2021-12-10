@@ -13,7 +13,7 @@
         @endauth
         <div class="tipe-laporan">
             <p>Pilih Tipe Laporan</p>
-            <div class="d-flex mb-5">
+            <div class="">
                 @if (old('laporan_type_id') == 1401)
                     <input type="radio" name="laporan_type_id" value="1401" checked="checked"> Laporan   
                     <input type="radio" name="laporan_type_id" value="1402"> Komentar
@@ -84,7 +84,7 @@
 
         <hr style="width: 99%">
 
-        <div class="d-flex space-bettwen">
+        <div class="">
             <div class="file">
                 <span>Lampiran</span>
                 <input type="file" class="custom-button" name="lampiran" id="" accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,image/*">

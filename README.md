@@ -195,7 +195,9 @@ Fitur berikut merupakan fitur Buat Laporan/Komentar website Lapor Prodi Teknik I
 
 Fitur berikut merupakan fitur Detail Laporan website Lapor Prodi Teknik Informatika yang berfungsi untuk melihat laporan secara lengkap. Pengguna dapat melihat waktu saat laporan dikirimkan. Kemudian dapat melihat ataupun mendownload file yang telah dilampirkan. Selain itu pengguna juga dapat mengubah ataupun menghapus laporan atau komentar yang sudah dikirimkan. 
 
-
+#### Penggunaan Form sebagai Pengganti AJAX
+![](tampilan/form.jpeg)
+Dalam membangun website Lapor Prodi Teknik Informatika kami menggunakan tag form sebagai gantinya. Karena didalamnya terdapat atribut `"action"` yang akan mengirimkan data yang diinputkan pada form langsung diolah kehalaman yang dituju.
 
 ### Knowledge
 Untuk meringankan beban tugas ini, ada berberapa keyword yang bisa anda cari untuk menyelesaikan tugas ini.

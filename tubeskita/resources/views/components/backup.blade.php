@@ -9,7 +9,7 @@
         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
         <div class="tipe-laporan">
             <p>Pilih Tipe Laporan</p>
-            <div class="d-flex mb-5">
+            <div class="">
                 <input type="radio" name="type_laporan" value="1401"> Pengaduan                            
                 <input type="radio" name="type_laporan" value="1402"> Aspirian                            
                 <input type="radio" name="type_laporan" value="1403"> Permintaan Informasi 
@@ -94,7 +94,7 @@
 
         <hr style="width: 99%">
 
-        <div class="d-flex space-bettwen">
+        <div class="">
             <div class="file">
                 <span>Lampiran</span>
                 <input type="file" class="custom-button" name="lampiran" id="">
