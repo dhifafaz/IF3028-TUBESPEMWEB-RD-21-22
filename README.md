@@ -162,7 +162,6 @@ Dan terakhir apabila ingin menggunakan isi dari database yang sudah kami buat bi
 
 ### Penjelasan aplikasi dan fiturnya
 
-
 #### 1. Fitur Registrasi
 ![](tampilan/registrasi.png)
 Fitur berikut merupakan fitur registrasi website Lapor Prodi Teknik Informatika yang berfungsi untuk memasukkan data-data pribadi bagi pengguna yang ingin membuat akun baru.
